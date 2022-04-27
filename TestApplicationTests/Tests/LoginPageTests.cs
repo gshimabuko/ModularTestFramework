@@ -1,15 +1,15 @@
 using NUnit.Framework;
 using CommonLibs.Implementation;
+using TestApplicationTests.Tests;
 
 namespace TestApplicationTests.tests
 {
-    public class LoginPageTests
+    public class LoginPageTests : BaseTests
     {
         [Test]
-        public void Test1()
+        public void VerifyLoginTest()
         {
-            CommonDriver CmnDriver = new CommonDriver("chrome");
-            CmnDriver.NavigateToFirstUrl("http://demo.guru99.com/v4");
+            loginPage.LoginToApplication("test@example.com","Test@12345");
         }
     }
 }
