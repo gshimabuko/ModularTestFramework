@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)selenium.webdriver.msedgedriver\99.0.1153\build\Selenium.WebDriver.MSEdgeDriver.targets" Condition="Exists('$(NuGetPackageRoot)selenium.webdriver.msedgedriver\99.0.1153\build\Selenium.WebDriver.MSEdgeDriver.targets')" />
+    <Import Project="$(NuGetPackageRoot)selenium.webdriver.microsoftwebdriver\10.1.14393\build\Selenium.WebDriver.MicrosoftWebDriver.targets" Condition="Exists('$(NuGetPackageRoot)selenium.webdriver.microsoftwebdriver\10.1.14393\build\Selenium.WebDriver.MicrosoftWebDriver.targets')" />
+    <Import Project="$(NuGetPackageRoot)selenium.webdriver.iedriver\3.141.59\build\Selenium.WebDriver.IEDriver.targets" Condition="Exists('$(NuGetPackageRoot)selenium.webdriver.iedriver\3.141.59\build\Selenium.WebDriver.IEDriver.targets')" />
+    <Import Project="$(NuGetPackageRoot)selenium.webdriver.chromedriver\99.0.4844.5100\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('$(NuGetPackageRoot)selenium.webdriver.chromedriver\99.0.4844.5100\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  </ImportGroup>
+</Project>

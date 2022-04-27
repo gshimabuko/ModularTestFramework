@@ -1,0 +1,5 @@
+c:\Users\guilherme.rocha\source\repos\ModularTestFramework\TestApplicationTests\obj\Debug\net6.0\TestApplicationTests.csproj.AssemblyReference.cache
+c:\Users\guilherme.rocha\source\repos\ModularTestFramework\TestApplicationTests\obj\Debug\net6.0\TestApplicationTests.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\guilherme.rocha\source\repos\ModularTestFramework\TestApplicationTests\obj\Debug\net6.0\TestApplicationTests.AssemblyInfoInputs.cache
+c:\Users\guilherme.rocha\source\repos\ModularTestFramework\TestApplicationTests\obj\Debug\net6.0\TestApplicationTests.AssemblyInfo.cs
+c:\Users\guilherme.rocha\source\repos\ModularTestFramework\TestApplicationTests\obj\Debug\net6.0\TestApplicationTests.csproj.CoreCompileInputs.cache
