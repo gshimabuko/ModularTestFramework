@@ -1,0 +1,12 @@
+c:\Users\guilherme.rocha\source\repos\ModularTestFramework\CommonLibs\bin\Debug\net6.0\CommonLibs.deps.json
+c:\Users\guilherme.rocha\source\repos\ModularTestFramework\CommonLibs\bin\Debug\net6.0\CommonLibs.dll
+c:\Users\guilherme.rocha\source\repos\ModularTestFramework\CommonLibs\bin\Debug\net6.0\CommonLibs.pdb
+c:\Users\guilherme.rocha\source\repos\ModularTestFramework\CommonLibs\obj\Debug\net6.0\CommonLibs.csproj.AssemblyReference.cache
+c:\Users\guilherme.rocha\source\repos\ModularTestFramework\CommonLibs\obj\Debug\net6.0\CommonLibs.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\guilherme.rocha\source\repos\ModularTestFramework\CommonLibs\obj\Debug\net6.0\CommonLibs.AssemblyInfoInputs.cache
+c:\Users\guilherme.rocha\source\repos\ModularTestFramework\CommonLibs\obj\Debug\net6.0\CommonLibs.AssemblyInfo.cs
+c:\Users\guilherme.rocha\source\repos\ModularTestFramework\CommonLibs\obj\Debug\net6.0\CommonLibs.csproj.CoreCompileInputs.cache
+c:\Users\guilherme.rocha\source\repos\ModularTestFramework\CommonLibs\obj\Debug\net6.0\CommonLibs.dll
+c:\Users\guilherme.rocha\source\repos\ModularTestFramework\CommonLibs\obj\Debug\net6.0\refint\CommonLibs.dll
+c:\Users\guilherme.rocha\source\repos\ModularTestFramework\CommonLibs\obj\Debug\net6.0\CommonLibs.pdb
+c:\Users\guilherme.rocha\source\repos\ModularTestFramework\CommonLibs\obj\Debug\net6.0\ref\CommonLibs.dll
