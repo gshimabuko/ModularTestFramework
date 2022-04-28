@@ -21,7 +21,7 @@ namespace TestApplicationTests.Tests
         private IConfigurationRoot _configuration;
         public ExtentReportUtils extentReportUtils;
         
-        string url;
+        public string url;
         string currentProjectDirectory;
         string currentSolutionDirectory;
         string reportFilename;
