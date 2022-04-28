@@ -1,5 +1,6 @@
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
+using System.IO;
 
 namespace CommonLibs.Utils
 {
@@ -11,6 +12,7 @@ namespace CommonLibs.Utils
 
         public ExtentReportUtils(string htmlReportFilename)
         {
+            Directory.CreateDirectory(htmlReportFilename);
             extentHtmlReport = new ExtentHtmlReporter(htmlReportFilename);
             extentReports = new ExtentReports();
             extentReports.AttachReporter(extentHtmlReport);

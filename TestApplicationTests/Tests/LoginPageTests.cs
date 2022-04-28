@@ -13,30 +13,34 @@ namespace TestApplicationTests.Tests
             extentReportUtils.createATestCase("Verify Login Page Test");
             extentReportUtils.addTestLog(Status.Info, "Performing Login");
             loginPage.LoginToApplication("test@example.com","Test@12345");
-            Thread.Sleep(3000);
+            Thread.Sleep(waitTime);
             string expectedTitle = "Home Page - My ASP.NET Application";
             string actualTitle = CmnDriver.GetPageTitle();
             Assert.AreEqual(expectedTitle,actualTitle);
         }
         [Test]
-        public void VerifyLoginTest2()
+        public void VerifyLoginFail()
         {
-            extentReportUtils.createATestCase("Verify Login Page Test 2");
+            extentReportUtils.createATestCase("Verify Login Fail");
             extentReportUtils.addTestLog(Status.Info, "Performing Login");
             loginPage.LoginToApplication("test@example.com","Test@1234");
-            Thread.Sleep(3000);
+            Thread.Sleep(waitTime);
             //string expectedTitle = "Home Page - My ASP.NET Application";
             string expectedTitle = "Log in - My ASP.NET Application";
+            string expectedWarning = "Invalid login attempt.";
             string actualTitle = CmnDriver.GetPageTitle();
-            Assert.AreEqual(expectedTitle,actualTitle);
+            
+            //Assert.AreEqual(expectedTitle,actualTitle);
+            //Assert.AreEqual(expectedWarning,loginPage.GetFailedLoginWarning());
+            Assert.IsTrue( (expectedTitle.Equals(actualTitle)) && ( expectedWarning.Equals( loginPage.GetFailedLoginWarning() ) ) );
         }
         [Test]
-        public void VerifyLoginTest3()
+        public void VerifySocialLogin()
         {
-            extentReportUtils.createATestCase("Verify Login Page Test 3");
+            extentReportUtils.createATestCase("Verify Social Login");
             extentReportUtils.addTestLog(Status.Info, "Performing Login");
             loginPage.LoginToApplication("facebook");
-            Thread.Sleep(3000);
+            Thread.Sleep(waitTime);
             //string expectedTitle = "Home Page - My ASP.NET Application";
             //string expectedTitle = "Log in - My ASP.NET Application";
             string expectedTitle = "Log into Facebook | Facebook";
@@ -49,7 +53,7 @@ namespace TestApplicationTests.Tests
             extentReportUtils.createATestCase("Verify Access Restriction Test 1");
             extentReportUtils.addTestLog(Status.Info, "Trying to go to Accounts View");
             loginPage.GoToView("Accounts");
-            Thread.Sleep(3000);
+            Thread.Sleep(waitTime);
             //string expectedTitle = "Home Page - My ASP.NET Application";
             string expectedURL = $"{url}?ReturnUrl=%2FFinancialAccounts";
             //string expectedTitle = "Log into Facebook | Facebook";
@@ -61,9 +65,9 @@ namespace TestApplicationTests.Tests
         {
             string view = "Categories";
             extentReportUtils.createATestCase("Verify Access Restriction Test 1");
-            extentReportUtils.addTestLog(Status.Info, "Trying to go to Accounts View");
+            extentReportUtils.addTestLog(Status.Info, "Trying to go to Categories View");
             loginPage.GoToView(view);
-            Thread.Sleep(3000);
+            Thread.Sleep(waitTime);
             //string expectedTitle = "Home Page - My ASP.NET Application";
             string expectedURL = $"{url}?ReturnUrl=%2F{view}";
             //string expectedTitle = "Log into Facebook | Facebook";
@@ -75,9 +79,9 @@ namespace TestApplicationTests.Tests
         {
             string view = "IncomeRecords";
             extentReportUtils.createATestCase("Verify Access Restriction Test 1");
-            extentReportUtils.addTestLog(Status.Info, "Trying to go to Accounts View");
+            extentReportUtils.addTestLog(Status.Info, "Trying to go to Income Records View");
             loginPage.GoToView("Income Records");
-            Thread.Sleep(3000);
+            Thread.Sleep(waitTime);
             //string expectedTitle = "Home Page - My ASP.NET Application";
             string expectedURL = $"{url}?ReturnUrl=%2F{view}";
             //string expectedTitle = "Log into Facebook | Facebook";
@@ -89,9 +93,9 @@ namespace TestApplicationTests.Tests
         {
             string view = "ExpenseRecords";
             extentReportUtils.createATestCase("Verify Access Restriction Test 1");
-            extentReportUtils.addTestLog(Status.Info, "Trying to go to Accounts View");
+            extentReportUtils.addTestLog(Status.Info, "Trying to go to Expenses View");
             loginPage.GoToView("Expenses Records");
-            Thread.Sleep(3000);
+            Thread.Sleep(waitTime);
             //string expectedTitle = "Home Page - My ASP.NET Application";
             string expectedURL = $"{url}?ReturnUrl=%2F{view}";
             //string expectedTitle = "Log into Facebook | Facebook";
@@ -103,14 +107,15 @@ namespace TestApplicationTests.Tests
         {
             string view = "Transfers";
             extentReportUtils.createATestCase("Verify Access Restriction Test 1");
-            extentReportUtils.addTestLog(Status.Info, "Trying to go to Accounts View");
+            extentReportUtils.addTestLog(Status.Info, "Trying to go to Transfers View");
             loginPage.GoToView("Transfer");
-            Thread.Sleep(3000);
+            Thread.Sleep(waitTime);
             //string expectedTitle = "Home Page - My ASP.NET Application";
             string expectedURL = $"{url}?ReturnUrl=%2F{view}";
             //string expectedTitle = "Log into Facebook | Facebook";
             string actualURL = CmnDriver.Driver.Url;
             Assert.AreEqual(expectedURL,actualURL);
         }
+        
     }
 }

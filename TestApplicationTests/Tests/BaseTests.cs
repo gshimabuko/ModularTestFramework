@@ -16,15 +16,19 @@ namespace TestApplicationTests.Tests
     {
         public CommonDriver CmnDriver;
         public TestAppLoginPage loginPage;
+        public TestAppAccountsPage accountsPage;
+        public TestAppCategoriesPage categoriesPage;
         public ActionTargets action;
         public IAlert alert;
         private IConfigurationRoot _configuration;
         public ExtentReportUtils extentReportUtils;
+        public int waitTime = 1000;
         
         public string url;
         string currentProjectDirectory;
         string currentSolutionDirectory;
         string reportFilename;
+        string ReportTime;
 
         ScreenshotUtils screenshot;
 
@@ -32,10 +36,11 @@ namespace TestApplicationTests.Tests
         [OneTimeSetUp] 
         public void preSetup()
         {
+            ReportTime = DateTime.Now.ToString("yyyy'-'MM'-'dd'T'HH'-'mm'-'ss");
             string workingDirectory = Environment.CurrentDirectory;
             currentProjectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
             currentSolutionDirectory = Directory.GetParent(workingDirectory).Parent.Parent.Parent.FullName;
-            reportFilename = $"{currentSolutionDirectory}/reports/TestApplicationTestReport.html";
+            reportFilename = $"{currentSolutionDirectory}/reports/test/TestApplicationTestReport_{ReportTime}/";
 
             extentReportUtils = new ExtentReportUtils(reportFilename);
             _configuration = new ConfigurationBuilder().AddJsonFile($"{currentProjectDirectory}/config/appSettings.json").Build();
@@ -54,6 +59,8 @@ namespace TestApplicationTests.Tests
             
             Actions action = new Actions(CmnDriver.Driver);
             loginPage = new TestAppLoginPage(CmnDriver.Driver);
+            accountsPage = new TestAppAccountsPage(CmnDriver.Driver);
+            categoriesPage = new TestAppCategoriesPage(CmnDriver.Driver);
             CmnDriver.NavigateToFirstUrl(url);
             screenshot = new ScreenshotUtils(CmnDriver.Driver);
         }
