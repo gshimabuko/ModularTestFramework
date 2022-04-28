@@ -87,7 +87,7 @@ namespace TestApplicationTests.Tests
         [Test]
         public void VerifyAccessRestriction4()
         {
-            string view = "ExpensesRecords";
+            string view = "ExpenseRecords";
             extentReportUtils.createATestCase("Verify Access Restriction Test 1");
             extentReportUtils.addTestLog(Status.Info, "Trying to go to Accounts View");
             loginPage.GoToView("Expenses Records");
@@ -101,10 +101,10 @@ namespace TestApplicationTests.Tests
         [Test]
         public void VerifyAccessRestriction5()
         {
-            string view = "Transfer";
+            string view = "Transfers";
             extentReportUtils.createATestCase("Verify Access Restriction Test 1");
             extentReportUtils.addTestLog(Status.Info, "Trying to go to Accounts View");
-            loginPage.GoToView(view);
+            loginPage.GoToView("Transfer");
             Thread.Sleep(3000);
             //string expectedTitle = "Home Page - My ASP.NET Application";
             string expectedURL = $"{url}?ReturnUrl=%2F{view}";
