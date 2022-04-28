@@ -11,7 +11,7 @@
           "ExtentReports": "4.1.0",
           "Selenium.Support": "3.141.0",
           "Selenium.WebDriver": "3.141.0",
-          "Selenium.WebDriver.ChromeDriver": "99.0.4844.5100",
+          "Selenium.WebDriver.ChromeDriver": "101.0.4951.4100",
           "Selenium.WebDriver.IEDriver": "3.141.59",
           "Selenium.WebDriver.MSEdgeDriver": "99.0.1153",
           "Selenium.WebDriver.MicrosoftWebDriver": "10.1.14393"
@@ -1051,7 +1051,7 @@
           }
         }
       },
-      "Selenium.WebDriver.ChromeDriver/99.0.4844.5100": {},
+      "Selenium.WebDriver.ChromeDriver/101.0.4951.4100": {},
       "Selenium.WebDriver.IEDriver/3.141.59": {},
       "Selenium.WebDriver.MicrosoftWebDriver/10.1.14393": {},
       "Selenium.WebDriver.MSEdgeDriver/99.0.1153": {},
@@ -2597,12 +2597,12 @@
       "path": "selenium.webdriver/3.141.0",
       "hashPath": "selenium.webdriver.3.141.0.nupkg.sha512"
     },
-    "Selenium.WebDriver.ChromeDriver/99.0.4844.5100": {
+    "Selenium.WebDriver.ChromeDriver/101.0.4951.4100": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-021uEuHHgaZ9X2oSCaClBun+azybXg5lw/Pq79fc3D98X0oEpHPuXRTRthxzmqTwH6CGnRNfTvHMZ9xdvHDLzQ==",
-      "path": "selenium.webdriver.chromedriver/99.0.4844.5100",
-      "hashPath": "selenium.webdriver.chromedriver.99.0.4844.5100.nupkg.sha512"
+      "sha512": "sha512-S/IPXjVlR1JPNzsZsOiBkGFHyv+KYhDEAh0cGzxVvhnd4VFo8iI+HGye8R58ec/6lUoFMw6e/Y/OvFAJElqmbA==",
+      "path": "selenium.webdriver.chromedriver/101.0.4951.4100",
+      "hashPath": "selenium.webdriver.chromedriver.101.0.4951.4100.nupkg.sha512"
     },
     "Selenium.WebDriver.IEDriver/3.141.59": {
       "type": "package",

@@ -1,5 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -8,11 +7,10 @@
   <ItemGroup>
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0"/>
     <PackageReference Include="Selenium.Support" Version="3.141.0"/>
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="99.0.4844.5100"/>
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="101.0.4951.4100"/>
     <PackageReference Include="Selenium.WebDriver.IEDriver" Version="3.141.59"/>
     <PackageReference Include="Selenium.WebDriver.MSEdgeDriver" Version="99.0.1153"/>
     <PackageReference Include="Selenium.WebDriver.MicrosoftWebDriver" Version="*"/>
     <PackageReference Include="ExtentReports" Version="4.1.0"/>
   </ItemGroup>
-
 </Project>

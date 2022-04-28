@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jHR2NgLIYnz6YQ+cLhGFcvdC+aratYYtj0bg9f8z4vsKMvVD7Mu/w6nFjOg/plxMwQEqcdNyYaTVV+/JRpGraQ==",
+  "dgSpecHash": "+pyAeIE5UVt42eXJU6JC0IVERwg93L/15PECCqCxoDQRURGzuCBwiGB9dLiTjq2zS/gK/S5xF/Xx3LBwZ9zZhg==",
   "success": true,
   "projectFilePath": "c:\\Users\\guilherme.rocha\\source\\repos\\ModularTestFramework\\TestApplication\\TestApplication.csproj",
   "expectedPackageFiles": [
@@ -94,7 +94,7 @@
     "C:\\Users\\guilherme.rocha\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\guilherme.rocha\\.nuget\\packages\\selenium.support\\3.141.0\\selenium.support.3.141.0.nupkg.sha512",
     "C:\\Users\\guilherme.rocha\\.nuget\\packages\\selenium.webdriver\\3.141.0\\selenium.webdriver.3.141.0.nupkg.sha512",
-    "C:\\Users\\guilherme.rocha\\.nuget\\packages\\selenium.webdriver.chromedriver\\99.0.4844.5100\\selenium.webdriver.chromedriver.99.0.4844.5100.nupkg.sha512",
+    "C:\\Users\\guilherme.rocha\\.nuget\\packages\\selenium.webdriver.chromedriver\\101.0.4951.4100\\selenium.webdriver.chromedriver.101.0.4951.4100.nupkg.sha512",
     "C:\\Users\\guilherme.rocha\\.nuget\\packages\\selenium.webdriver.iedriver\\3.141.59\\selenium.webdriver.iedriver.3.141.59.nupkg.sha512",
     "C:\\Users\\guilherme.rocha\\.nuget\\packages\\selenium.webdriver.microsoftwebdriver\\10.1.14393\\selenium.webdriver.microsoftwebdriver.10.1.14393.nupkg.sha512",
     "C:\\Users\\guilherme.rocha\\.nuget\\packages\\selenium.webdriver.msedgedriver\\99.0.1153\\selenium.webdriver.msedgedriver.99.0.1153.nupkg.sha512",
