@@ -1,19 +1,41 @@
+using System;
+using System.IO;
+using NUnit.Framework;
+using OpenQA.Selenium;
 using CommonLibs.Implementation;
 using TestApplication.Pages;
-using NUnit.Framework;
+using Microsoft.Extensions.Configuration;
 namespace TestApplicationTests.Tests
 {
     public class BaseTests
     {
         public CommonDriver CmnDriver;
-        public TestApplicationLoginPage loginPage;
-        string url = "https://localhost:44385/Account/Login";
+        public TestAppLoginPage loginPage;
+        public ActionTargets action;
+        public IAlert alert;
+        private IConfigurationRoot _configuration;
+        
+        string url;
+        string currentProjectDirectory;
+        string currentSolutionDirectory;
+        string reportFilename;
+
+        [OneTimeSetUp] 
+        public void preSetup()
+        {
+            string workingDirectory = Environment.CurrentDirectory;
+            currentProjectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+            _configuration = new ConfigurationBuilder().AddJsonFile($"{currentProjectDirectory}/config/appSettings.json").Build();
+        }
         [SetUp]
         public void Setup()
         {
-            CmnDriver = new CommonDriver("chrome");
+            string browserType = _configuration["browserType"];
+            CmnDriver = new CommonDriver(browserType);
+            url = _configuration["baseUrl"];
+            
+            loginPage = new TestAppLoginPage(CmnDriver.Driver);
             CmnDriver.NavigateToFirstUrl(url);
-            loginPage = new TestApplicationLoginPage(CmnDriver.Driver);
         }
         [TearDown]
         public void TearDown()
