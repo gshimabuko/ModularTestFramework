@@ -1,7 +1,9 @@
 using System;
 using System.IO;
 using NUnit.Framework;
+using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using CommonLibs.Implementation;
 using TestApplication.Pages;
 using Microsoft.Extensions.Configuration;
@@ -18,10 +20,14 @@ namespace TestApplicationTests.Tests
         public IAlert alert;
         private IConfigurationRoot _configuration;
         public ExtentReportUtils extentReportUtils;
+        
         string url;
         string currentProjectDirectory;
         string currentSolutionDirectory;
         string reportFilename;
+
+        ScreenshotUtils screenshot;
+
 
         [OneTimeSetUp] 
         public void preSetup()
@@ -33,6 +39,7 @@ namespace TestApplicationTests.Tests
 
             extentReportUtils = new ExtentReportUtils(reportFilename);
             _configuration = new ConfigurationBuilder().AddJsonFile($"{currentProjectDirectory}/config/appSettings.json").Build();
+            
         }
         [SetUp]
         public void Setup()
@@ -45,12 +52,22 @@ namespace TestApplicationTests.Tests
             extentReportUtils.addTestLog(Status.Info, $"Browser Type: {browserType}");
             extentReportUtils.addTestLog(Status.Info, $"Base url: {url}");
             
+            Actions action = new Actions(CmnDriver.Driver);
             loginPage = new TestAppLoginPage(CmnDriver.Driver);
             CmnDriver.NavigateToFirstUrl(url);
+            screenshot = new ScreenshotUtils(CmnDriver.Driver);
         }
         [TearDown]
         public void TearDown()
         {
+            string currentExecutionTime = DateTime.Now.ToString("yyyy'-'MM'-'dd'T'HH'-'mm'-'ss");
+            string screenshotFilename = $"{currentSolutionDirectory}/screenshots/test-{currentExecutionTime}.jpeg";
+            if(TestContext.CurrentContext.Result.Outcome == ResultState.Failure)
+            {
+                extentReportUtils.addTestLog(Status.Fail, "One or more steps failed");
+            }
+            screenshot.CaptureAndSaveScreenshot(screenshotFilename);
+            extentReportUtils.addScreenshot(screenshotFilename);
             CmnDriver.CloseAllBrowserWindows();
         }
         [OneTimeTearDown]

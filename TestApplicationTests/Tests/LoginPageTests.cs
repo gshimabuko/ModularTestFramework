@@ -1,10 +1,9 @@
 using NUnit.Framework;
-using CommonLibs.Implementation;
-using TestApplicationTests.Tests;
 using System.Threading;
 using AventStack.ExtentReports;
+using CommonLibs.Utils;
 
-namespace TestApplicationTests.tests
+namespace TestApplicationTests.Tests
 {
     public class LoginPageTests : BaseTests
     {
@@ -16,7 +15,6 @@ namespace TestApplicationTests.tests
             loginPage.LoginToApplication("test@example.com","Test@12345");
             Thread.Sleep(3000);
             string expectedTitle = "Home Page - My ASP.NET Application";
-            Thread.Sleep(3000);
             string actualTitle = CmnDriver.GetPageTitle();
             Assert.AreEqual(expectedTitle,actualTitle);
         }
@@ -27,8 +25,8 @@ namespace TestApplicationTests.tests
             extentReportUtils.addTestLog(Status.Info, "Performing Login");
             loginPage.LoginToApplication("test@example.com","Test@1234");
             Thread.Sleep(3000);
+            //string expectedTitle = "Home Page - My ASP.NET Application";
             string expectedTitle = "Log in - My ASP.NET Application";
-            Thread.Sleep(3000);
             string actualTitle = CmnDriver.GetPageTitle();
             Assert.AreEqual(expectedTitle,actualTitle);
         }

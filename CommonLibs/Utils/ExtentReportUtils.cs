@@ -1,4 +1,3 @@
-using System;
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
 
