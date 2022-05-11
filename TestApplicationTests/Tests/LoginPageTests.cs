@@ -55,7 +55,7 @@ namespace TestApplicationTests.Tests
             loginPage.GoToView("Accounts");
             Thread.Sleep(waitTime);
             //string expectedTitle = "Home Page - My ASP.NET Application";
-            string expectedURL = $"{url}?ReturnUrl=%2FFinancialAccounts";
+            string expectedURL = $"{loginURL}?ReturnUrl=%2FFinancialAccounts";
             //string expectedTitle = "Log into Facebook | Facebook";
             string actualURL = CmnDriver.Driver.Url;
             Assert.AreEqual(expectedURL,actualURL);
@@ -69,7 +69,7 @@ namespace TestApplicationTests.Tests
             loginPage.GoToView(view);
             Thread.Sleep(waitTime);
             //string expectedTitle = "Home Page - My ASP.NET Application";
-            string expectedURL = $"{url}?ReturnUrl=%2F{view}";
+            string expectedURL = $"{loginURL}?ReturnUrl=%2F{view}";
             //string expectedTitle = "Log into Facebook | Facebook";
             string actualURL = CmnDriver.Driver.Url;
             Assert.AreEqual(expectedURL,actualURL);
@@ -83,7 +83,7 @@ namespace TestApplicationTests.Tests
             loginPage.GoToView("Income Records");
             Thread.Sleep(waitTime);
             //string expectedTitle = "Home Page - My ASP.NET Application";
-            string expectedURL = $"{url}?ReturnUrl=%2F{view}";
+            string expectedURL = $"{loginURL}?ReturnUrl=%2F{view}";
             //string expectedTitle = "Log into Facebook | Facebook";
             string actualURL = CmnDriver.Driver.Url;
             Assert.AreEqual(expectedURL,actualURL);
@@ -97,7 +97,7 @@ namespace TestApplicationTests.Tests
             loginPage.GoToView("Expenses Records");
             Thread.Sleep(waitTime);
             //string expectedTitle = "Home Page - My ASP.NET Application";
-            string expectedURL = $"{url}?ReturnUrl=%2F{view}";
+            string expectedURL = $"{loginURL}?ReturnUrl=%2F{view}";
             //string expectedTitle = "Log into Facebook | Facebook";
             string actualURL = CmnDriver.Driver.Url;
             Assert.AreEqual(expectedURL,actualURL);
@@ -111,7 +111,7 @@ namespace TestApplicationTests.Tests
             loginPage.GoToView("Transfer");
             Thread.Sleep(waitTime);
             //string expectedTitle = "Home Page - My ASP.NET Application";
-            string expectedURL = $"{url}?ReturnUrl=%2F{view}";
+            string expectedURL = $"{loginURL}?ReturnUrl=%2F{view}";
             //string expectedTitle = "Log into Facebook | Facebook";
             string actualURL = CmnDriver.Driver.Url;
             Assert.AreEqual(expectedURL,actualURL);

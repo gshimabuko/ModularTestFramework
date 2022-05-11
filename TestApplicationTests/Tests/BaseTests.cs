@@ -18,6 +18,7 @@ namespace TestApplicationTests.Tests
         public TestAppLoginPage loginPage;
         public TestAppAccountsPage accountsPage;
         public TestAppCategoriesPage categoriesPage;
+        public TestAppIncomePage incomePage;
         public ActionTargets action;
         public IAlert alert;
         private IConfigurationRoot _configuration;
@@ -25,6 +26,7 @@ namespace TestApplicationTests.Tests
         public int waitTime = 1000;
         
         public string url;
+        public string loginURL;
         string currentProjectDirectory;
         string currentSolutionDirectory;
         string reportFilename;
@@ -60,8 +62,10 @@ namespace TestApplicationTests.Tests
             Actions action = new Actions(CmnDriver.Driver);
             loginPage = new TestAppLoginPage(CmnDriver.Driver);
             accountsPage = new TestAppAccountsPage(CmnDriver.Driver);
+            incomePage = new TestAppIncomePage(CmnDriver.Driver);
             categoriesPage = new TestAppCategoriesPage(CmnDriver.Driver);
-            CmnDriver.NavigateToFirstUrl(url);
+            loginURL = $"{url}/Account/Login";
+            CmnDriver.NavigateToFirstUrl(loginURL);
             screenshot = new ScreenshotUtils(CmnDriver.Driver);
         }
         [TearDown]

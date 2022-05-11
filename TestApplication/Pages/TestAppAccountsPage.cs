@@ -6,7 +6,6 @@ namespace TestApplication.Pages
 {
     public class TestAppAccountsPage : BasePage
     {
-        private IWebDriver _driver;
         private IWebElement newAccountButton => _driver.FindElement(By.LinkText("Create New"));
         private IWebElement accountName => _driver.FindElement(By.Id("name"));
         private IWebElement accountBalance => _driver.FindElement(By.Id("accountBalance"));
@@ -28,8 +27,10 @@ namespace TestApplication.Pages
         }
         public bool checkAccountCreation(string name)
         {
-            IWebElement createdAccount = _driver.FindElement(By.XPath($"//*[contains(text(),\"{name}\")]"));
-            return(createdAccount.Text.Equals("name"));
+            IWebElement createdAccount = _driver.FindElement(By.XPath($"//td[contains(text(),\"{name}\")]/../td[1]"));
+            string retrievedText = createdAccount.Text;
+            bool testCondition = retrievedText.Equals(name);
+            return(testCondition);
         }
     }
 }

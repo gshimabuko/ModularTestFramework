@@ -30,7 +30,7 @@ namespace TestApplicationTests.Tests
             extentReportUtils.addTestLog(Status.Info, "Trying to go to Accounts View");
             loginPage.GoToView("Accounts");
             Thread.Sleep(waitTime);
-            string expectedURL = $"{url}?/FinancialAccounts";
+            string expectedURL = $"{url}/FinancialAccounts";
             //string expectedTitle = "Log into Facebook | Facebook";
             string actualURL = CmnDriver.Driver.Url;
 

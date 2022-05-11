@@ -7,7 +7,6 @@ namespace TestApplication.Pages
 {
     public class TestAppCategoriesPage : BasePage
     {
-        private IWebDriver _driver;
         private IWebElement newCategoryButton => _driver.FindElement(By.LinkText("Create New"));
         private IWebElement categoryName => _driver.FindElement(By.Id("name"));
         private IWebElement total => _driver.FindElement(By.Id("total"));
@@ -31,7 +30,7 @@ namespace TestApplication.Pages
         public bool checkCategoryCreation(string name)
         {
             IWebElement createdCategory = _driver.FindElement(By.XPath($"//*[contains(text(),\"{name}\")]"));
-            return (createdCategory.Text.Equals("name"));
+            return (createdCategory.Text.Equals(name));
         }
     }
 }
